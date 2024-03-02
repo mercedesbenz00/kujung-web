@@ -1,0 +1,55 @@
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next {
+  height: 22px !important;
+  padding: 1px 13px !important;
+  border-radius: 5px !important;
+  color: white !important;
+  background-color: black !important;
+}
+
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .btn-next:disabled {
+  height: 22px !important;
+  padding: 1px 13px !important;
+  border-radius: 5px !important;
+  box-shadow: 0 0 0 1px rgba(86, 86, 86, 0.5) !important;
+  background-color: transparent !important;
+  color: #61605a !important;
+}
+
+.el-pagination__classifier {
+  display: none !important;
+}
+
+.el-pagination__goto {
+  display: none !important;
+  margin: 0px !important;
+}
+
+.el-pagination__jump {
+  margin: 0px !important;
+}
+
+.el-input__wrapper {
+  background: transparent !important;
+  height: 22px !important;
+  box-shadow: none !important;
+}
+
+.el-input__wrapper:hover {
+  box-shadow: none !important;
+}
+
+.el-pagination .el-input__inner {
+  color: black !important;
+  font-size: 13px !important;
+  line-height: 13px !important;
+  margin-left: -20px !important;
+  pointer-events: none !important;
+}
+
+.el-pagination .btn-next .el-icon,
+.el-pagination .btn-prev .el-icon {
+  font-weight: bold !important;
+  font-size: 13px !important;
+}

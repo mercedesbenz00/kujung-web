@@ -1,0 +1,246 @@
+@import "./_theme_colors";
+@import "./_theme_font";
+@import "./_carousel";
+@import "./_pagination";
+@import "./_typograph";
+@import "./_element";
+@import "./_dropdown";
+@import "./_stepper";
+@import "./sweetalert2";
+@import "./_vfm_modal";
+
+// * {
+//   transition: 0.3s;
+// }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar:vertical {
+  width: 16px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 16px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--c-warm-gray-900);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+// checkbox
+.container {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  // padding-left: 35px;
+  // margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 2px #040911 solid;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  // background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  // background-color: #002b4e;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 10px;
+  top: -11px;
+  width: 15px;
+  height: 31px;
+  border: solid #7c3d3a;
+  border-width: 0 3px 3px 0;
+  transform: rotate(44deg);
+}
+
+.label-1 {
+  @apply w-[90px] md:w-[120px]
+  text-left 
+  font-black  mb-0
+  text-[13px] md:text-[15px] lg:text-[18px];
+}
+
+.form-box1 {
+  @apply flex-1
+  h-[50px] md:h-[54px]
+  min-w-0
+  bg-transparent
+  focus:border-secondaryNavy-600
+  border border-secondaryNavy-600
+  px-[14px]
+  placeholder-secondaryNavy-300 
+  outline-none
+  text-[12px] md:text-[13px]
+  disabled:bg-warmGray-600 disabled:text-white;
+}
+
+.button-1 {
+  @apply h-[50px] md:h-[54px]
+  w-[76px] md:w-[100px]
+  bg-secondaryNavy-600
+  text-white
+  text-[13px]
+  font-[700];
+}
+
+.div-1 {
+  @apply flex flex-col gap-[8px]  
+  ml-[90px] md:ml-[120px];
+}
+
+.error-msg-1 {
+  @apply text-[#FE5151] 
+  text-[12px]
+  md:text-[13px]
+  font-[700]
+  text-start;
+}
+
+.guide-msg-1 {
+  @apply text-[#79B7E6] 
+  text-[12px]
+  md:text-[13px]
+  font-[700]
+  text-start;
+}
+
+.span-1 {
+  @apply text-black 
+  text-[11px]
+  md:text-[12px]
+  font-[700]
+  text-start;
+}
+
+.button-2 {
+  @apply col-span-1 
+  text-[15px]
+  border border-secondaryNavy-800 
+  w-full
+  h-[60px] md:h-[70px];
+}
+
+.button-3 {
+  @apply col-span-1 
+  text-[15px]
+  text-[700]
+  text-white
+  bg-secondaryNavy-600
+  border border-secondaryNavy-800 
+  w-full
+  h-[60px] md:h-[70px];
+}
+
+.button-4 {
+  @apply col-span-1 
+  text-[15px]
+  font-bold
+  border border-secondaryNavy-800 
+  w-full
+  h-[32px];
+}
+
+.button-5 {
+  @apply col-span-1 
+  text-[15px]
+  text-[700]
+  text-white
+  bg-secondaryNavy-600
+  border border-secondaryNavy-800 
+  w-full
+  h-[32px];
+}
+
+.button-primary-600 {
+  @apply col-span-1 
+  text-[15px]
+  text-[700]
+  text-white
+  bg-primary-600
+  border border-secondaryNavy-800 
+  w-full
+  h-[60px] md:h-[70px];
+}
+
+.button-warmgray-900 {
+  @apply col-span-1 
+  text-[15px]
+  text-[700]
+  text-white
+  bg-warmGray-900
+  w-full
+  h-[60px] md:h-[70px];
+}
+
+.mypage-container {
+  @apply flex flex-col lg:flex-row max-w-[728px] lg:max-w-[1024px] w-full self-center px-[6px] md:px-0 pt-[48px] md:pt-[78px] lg:pt-[108px] pb-[110px];
+}
+
+.construction-ex-status {
+  @apply absolute left-[3px] top-[3px] md:left-[6px] md:top-[6px] px-[8px] md:px-[20px] h-[23px] md:h-[35px] border rounded-[12px] md:rounded-[18px] items-center justify-center flex;
+}
+
+.construction-ex-status1 {
+  @apply px-[20px] h-[35px] border rounded-[18px] items-center justify-center flex;
+}
+
+.rs-fullvideo-cover {
+  @apply absolute left-0 top-0 right-0 bottom-0 opacity-0;
+}
+
+.fp-watermark {
+  opacity: 0;
+  width: 0;
+}
